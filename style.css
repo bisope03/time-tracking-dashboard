@@ -60,3 +60,9 @@ picture {
     max-width: 100%;
     display: block;
 }
+
+.container{
+    padding-inline: 2em;
+    margin-inline: auto;
+    max-width: 80rem;
+}
