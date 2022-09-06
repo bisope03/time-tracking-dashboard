@@ -109,7 +109,8 @@ body {
 
 @media screen and (min-width: 500px){
     .activity-main{
-        grid-row: 1/3;
+        /*grid row property to specify on which row-line to start the item and which row-line to end the item*/
+        grid-row: 1/3;  /*cards will start on row line 1 and end on row-line 3*/
         display: flex;
         flex-flow: column nowrap;
     }
