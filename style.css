@@ -115,3 +115,24 @@ body {
         flex-flow: column nowrap;
     }
 }
+
+.activity-user{
+    width: 100%;
+    padding: 3.1rem 2.9rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    background: var(--clr-blue);
+    border-radius: 0 0 var(--br) var(--br);
+}
+
+@media screen and (min-width: 500px){
+    .activity-user{
+        padding: 3.4rem 2.9rem 8rem 2.9rem;
+        flex-flow: column nowrap;
+        align-items: start;
+        gap: 4.3rem;
+        flex: 1 0 auto;
+    }
+}
