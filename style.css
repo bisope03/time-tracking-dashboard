@@ -43,14 +43,11 @@ p {
 body {
     font-family: --ff-rubik;
     font-size: 300;
-    background-color: var(--clr-dark-blue);
+    background: var(--clr-v-dark-blue);
     line-height: 1.5;
     min-height: 100vh;
-
-    display: grid;
-    grid-template-rows: min-content 1fr;
-
-    overflow-x: hidden;
+    width: 100%;
+    padding: 8.1rem, 2.4rem;
 
 }
 
@@ -61,8 +58,34 @@ picture {
     display: block;
 }
 
+a, a:hover, a:focus, a:active{
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+/* main styling */
+
 .container{
-    padding-inline: 2em;
-    margin-inline: auto;
-    max-width: 80rem;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-auto-rows: max-content;  /*each row will be created by the browser*/
+    grid-template-columns: 1fr;  /*single column layout*/
+    justify-items: center;
+    gap: 2.4rem;
+}
+
+@media screen and (min-width: 500px){
+    .container{
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        grid-template-rows: 1fr 1fr;
+        min-height: 51.8rem;
+        gap: 3rem;
+    }
 }

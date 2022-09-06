@@ -8,16 +8,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   
   <title>Time tracking dashboard</title>
 </head>
 <body>
   <div class="container">
+
     <div class="activity-main">
       <div class="activity-user">
         <img src="./images/image-jeremy.png" alt="image">
-        <p>Report for</p>
-        <h3>Jeremy Robson</h3>
+        <div class="user-container">
+          <p>Report for</p>
+          <h3>Jeremy Robson</h3>
+        </div>
       </div>
       <div class="tracker-options">
         <button class="options" data-option="daily">Daily</button>
@@ -26,7 +30,7 @@
       </div>
     </div>
 
-    <div class="activity-card">
+    <!-- <div class="activity-card"> -->
       <div class="activity-work">
         <div class="activity-bg">
           <img src="./images/icon-work.svg" alt="work-bg">
@@ -48,7 +52,7 @@
           <img src="./images/icon-play.svg" alt="play-bg">
         </div>
         <div class="activity-header">
-          <h2 class="activity-name">Work</h2>
+          <h2 class="activity-name">Play</h2>
           <button class="activity-options">
             <img src="./images/icon-ellipsis.svg" alt="options">
           </button>
@@ -64,7 +68,7 @@
           <img src="./images/icon-study.svg" alt="study-bg">
         </div>
         <div class="activity-header">
-          <h2 class="activity-name">Work</h2>
+          <h2 class="activity-name">Study</h2>
           <button class="activity-options">
             <img src="./images/icon-ellipsis.svg" alt="options">
           </button>
@@ -80,7 +84,7 @@
           <img src="./images/icon-exercise.svg" alt="exercise-bg">
         </div>
         <div class="activity-header">
-          <h2 class="activity-name">Work</h2>
+          <h2 class="activity-name">Exercise</h2>
           <button class="activity-options">
             <img src="./images/icon-ellipsis.svg" alt="options">
           </button>
@@ -89,7 +93,6 @@
           <h3>32hrs</h3>
           <p class="time-period">Last Week - <span class="time">36hrs</span></p>
         </div>
-      </div>
       </div>
 
       <div class="activity-social">
@@ -97,7 +100,7 @@
           <img src="./images/icon-social.svg" alt="social-bg">
         </div>
         <div class="activity-header">
-          <h2 class="activity-name">Work</h2>
+          <h2 class="activity-name">Social</h2>
           <button class="activity-options">
             <img src="./images/icon-ellipsis.svg" alt="options">
           </button>
@@ -107,14 +110,13 @@
           <p class="time-period">Last Week - <span class="time">36hrs</span></p>
         </div>
       </div>
-      </div>
 
-      <div class="activity-work">
+      <div class="activity-selfcare">
         <div class="activity-bg">
           <img src="./images/icon-self-care.svg" alt="selfcare-bg">
         </div>
         <div class="activity-header">
-          <h2 class="activity-name">Work</h2>
+          <h2 class="activity-name">Self Care</h2>
           <button class="activity-options">
             <img src="./images/icon-ellipsis.svg" alt="options">
           </button>
@@ -124,7 +126,7 @@
           <p class="time-period">Last Week - <span class="time">36hrs</span></p>
         </div>
       </div>
-    </div>
+    <!-- </div> -->
   </div>
 </body>
 </html>
