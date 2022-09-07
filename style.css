@@ -1,6 +1,7 @@
 /* custom properties */
 
 :root {
+    /* colors */
     --clr-blue: hsl(246, 80%, 60%);
     --clr-v-dark-blue: hsl(226, 43%, 10%);
     --clr-dark-blue: hsl(235, 46%, 20%);
@@ -13,7 +14,14 @@
     --clr-lime-green: hsl(145, 58%, 55%);
     --clr-soft-orange: hsl(43, 84%, 65%);
 
+    /* font family */
     --ff-rubik: 'Rubik', sans-serif;
+
+    /* font size */
+    --fs-h1: clamp(2.4rem, 1.8366rem+ 1.5023vw, 4rem);
+    --fs-time-window: 1.8rem;
+    --fs-activity-name: 1.8rem;
+    --fs-activity-result: clamp(3.2rem, 2.3549rem + 2.2535vw, 5.6rem);
 
     /* border-radius */
     --br: 1.5rem;
@@ -65,7 +73,7 @@ button {
 /* main styling */
 
 body {
-    font-family: --ff-rubik;
+    font-family: var(--ff-rubik);
     background: var(--clr-v-dark-blue);
     display: grid;
     line-height: 1;
@@ -135,4 +143,79 @@ body {
         gap: 4.3rem;
         flex: 1 0 auto;
     }
+}
+
+.activity-user-img{
+    width: 6.4rem;
+    border: 0.3rem solid white;
+    border-radius: 50%;
+}
+
+@media screen and (min-width: 500px){
+    .activity-user-img{
+        width: 7.8rem;
+    }
+}
+
+.user-container{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.4rem;
+}
+
+@media screen and (min-width: 500px){
+    .user-container{
+        gap: 0.3rem;
+        max-width: 60%;
+    }
+}
+
+.user-container-for{
+    font-size: 1.5rem;
+    color: var(--clr-pale-blue);
+}
+
+.user-container-name{
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: white;
+}
+
+@media screen and (mmin-width: 500px){
+    .activity-user-name{
+        line-height: 4rem;
+    }
+}
+
+.tracker-options{
+    padding: 2.4rem 2rem 2.5rem 3.5rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+@media screen and (min-width: 500px){
+    .tracker-options{
+        flex-flow: column nowrap;
+        gap: 2rem;
+        padding: 2.6rem 3.2rem 3.2rem;
+    }
+}
+
+.options{
+    width: max-content;
+    font-size: var(--fs-time-window);
+    color: var(--clr-desaturated-blue);
+    transition: color 250ms;
+    cursor: pointer;
+}
+
+/* .options:hover,
+.options:active{
+    color: white;
+} */
+
+.options:is(:hover, :active){
+    color: white;
 }
