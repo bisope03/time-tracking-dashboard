@@ -219,3 +219,43 @@ body {
 .options:is(:hover, :active){
     color: white;
 }
+
+.activity-tracker{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 3.8rem 1fr;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+    border-radius: var(--br);
+}
+
+@media screen and (min-width: 500px){
+    .activity-tracker {
+        grid-template-rows: 4.5rem 1fr;
+    }
+}
+
+.activity-tracker:is(.work){
+    --background: var(--clr-light-red-1);
+}
+.activity-tracker:is(.play){
+    --background: var(--clr-soft-blue);
+}
+.activity-tracker:is(.study){
+    --background: var(--clr-light-red-2);
+}
+.activity-tracker:is(.exercise){
+    --background: var(--clr-lime-green);
+}
+.activity-tracker:is(.social){
+    --background: var(--clr-violet);
+}
+.activity-tracker:is(.selfcare){
+    --background: var(--clr-soft-orange)
+}
+
+
+
+
+
