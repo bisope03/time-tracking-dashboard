@@ -105,11 +105,18 @@ let data = [
 
 const buttons = document.querySelector('.activity-options');
 
+const activateClickedButton = (button) = {
+    // To remove the other active buttons
+    buttons.forEach(b => b.classList.remove('active'))
+    button.classList.add('active')
+}
+
 buttons.forEach(button => {
     button.addEventListener('click', () => {
         activateClickedButton(button);
         const clickedOption = button.dataset.option; //daily, weekly, monthly
-        renderCards(clickedOption)
+        renderCards(clickedOption);
+        console.log('Button is clicked')
 
     })
 })
