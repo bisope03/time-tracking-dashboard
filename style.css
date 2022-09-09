@@ -7,8 +7,9 @@
     --clr-dark-blue: hsl(235, 46%, 20%);
     --clr-desaturated-blue: hsl(235, 45%, 61%);
     --clr-soft-blue: hsl(195, 74%, 62%);
-    --clr-violet: hsl(264, 64%, 52%);
+    --clr-hover-blue: hsl(236, 41%, 34%);
     --clr-pale-blue: hsl(236, 100%, 87%);
+    --clr-violet: hsl(264, 64%, 52%);
     --clr-light-red-1:  hsl(15, 100%, 70%);
     --clr-light-red-2: hsl(348, 100%, 68%);
     --clr-lime-green: hsl(145, 58%, 55%);
@@ -51,6 +52,8 @@ figure,
 picture {
     margin: 0; 
     padding: 0;
+    border: 0;
+    vertical-align: baseline;
 }
 
 h1,
@@ -68,6 +71,10 @@ picture {
     display: block;
 }
 
+body{
+    line-height: 1;
+}
+
 a, a:hover, a:focus, a:active{
     text-decoration: none;
     color: inherit;
@@ -77,6 +84,16 @@ button {
     border: none;
     outline: none;
     background: none;
+}
+
+/* custom additions */
+:root, *{
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+    /* 1rem = 10px, 0.1rem = 1px */
 }
 
 /* main styling */
@@ -280,7 +297,7 @@ body {
     z-index: var(--z-index-bottom);
 }
  
-.activity-header{
+.activity-info{
     position: relative;
     z-index: var(--z-index-middle);
     grid-row: 2/3;
@@ -288,5 +305,62 @@ body {
     transition: background 250ms, transform 250ms;
     height: 100%;
     padding: 2.5rem 2.4rem;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.6rem;
+    cursor: pointer;
+}
+
+.activity-tracker:hover > .activity-info{
+    background: var(--clr-hover-blue);
+}
+
+@media screen and (min-width: 500px){
+    .activity-info{
+        gap: 2.4rem;
+        padding: 2.9rem 3rem 3.2rem;
+    }
+}
+
+.activity-header,
+.activity-time{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media screen and (min-width: 500px){
+    .activity-time{
+        flex-flow: column nowrap;
+        align-items: start;
+        gap: 0.8rem;
+    }
+}
+
+.activity-name{
+    color: white;
+    font-weight: 500;
+}
+
+.activity-options{
+    transition: white 250ms;
+}
+
+.activity-options:hover > img{
+    fill: white;
+}
+
+.activity-current-time{
+    font-size: var(--fs-activity-result);
+    font-weight: 300;
+    color: white;
+    line-height: 6.6rem;
+}
+
+.activity-previous-time{
+    font-size: var(--fs-activity-window);
+    color: var(--clr-pale-blue);
 }
 
