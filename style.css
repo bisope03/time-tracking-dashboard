@@ -86,7 +86,7 @@ button {
     background: none;
 }
 
-/* custom additions */
+/* custom additional properties */
 :root, *{
     box-sizing: border-box;
 }
