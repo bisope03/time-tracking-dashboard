@@ -110,10 +110,14 @@ const activateClickedButton = (button) => {
     button.classList.add('active');
 };
 
-const clearActivitties = () =>
+const clearActivities = () => {
+  // clear the existing cards from the html
+  const activities = document.querySelectorAll('.activity-tracker');
+  activities.forEach(a => a.remove());
+}
 
 const renderCards = (clickedOption) => {
-
+  clearActivities()
   const activityTracker = document.querySelector('.container')
 
     const calcTimeFrame = (option) => {
