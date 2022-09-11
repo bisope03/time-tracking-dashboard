@@ -237,6 +237,7 @@ body {
 .options{
     width: max-content;
     font-size: var(--fs-time-window);
+    font-weight: 400;
     color: var(--clr-desaturated-blue);
     transition: color 250ms;
     cursor: pointer;
@@ -282,7 +283,7 @@ body {
 .activity-tracker:is(.social){
     --background: var(--clr-violet);
 }
-.activity-tracker:is(.selfcare){
+.activity-tracker:is(.self-care){
     --background: var(--clr-soft-orange)
 }
 
